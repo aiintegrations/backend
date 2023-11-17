@@ -1,0 +1,4 @@
+To startup the virtual environment and get the backend running:
+source venv/bin/activate
+2. python manage.py runserver
+
