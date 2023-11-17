@@ -78,7 +78,6 @@ def chat(request):
   print(f"Assistant response: {response}")  # Debugging line
   return JsonResponse({"response": response})
 
-
 @api_view(['POST'])
 def chatbot_view(request):
     client = OpenAI(api_key=settings.OPENAI_API_KEY)
