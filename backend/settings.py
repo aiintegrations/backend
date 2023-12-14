@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-i#uj6haau772h8ig=6u$fte^$s0-b7sm4hns_b($c$&v2+alnr"
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "ASDFLASKDJFLKASJDF"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -114,6 +114,10 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Replace with your React app's URL
 ]
 
 

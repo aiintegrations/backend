@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 # from api.views import TestModelViewSet
-from api.views import start_conversation, chat, chatbot_view
+from api.views import start_conversation, chat, chatbot_view, test_chatbot_view
 
 
 router = DefaultRouter()
@@ -31,6 +31,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('start/', start_conversation, name='start_chatbot'),
     path('chat/', chat, name='chat_with_chatbot'),
+    path('testResponseOnUi/', test_chatbot_view, name='test_chatbot_view'),
     path('chatbot/', chatbot_view, name='chatbot'),
 ]
 

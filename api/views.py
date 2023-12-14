@@ -79,6 +79,14 @@ def chat(request):
   return JsonResponse({"response": response})
 
 @api_view(['POST'])
+def test_chatbot_view(request):
+      data = request.data
+      thread_id = data.get('thread_id')
+      user_input = data.get('message', '')
+      response = "Certainly! AI Integrations is a leading provider of cutting-edge AI solutions and services for businesses. Our expertise lies in custom AI chatbots, AI software integration, and data analysis. Our custom AI chatbots are sophisticated extensions of your business, capable of handling customer inquiries, streamlining sales processes, and delivering personalized user experiences. We also specialize in integrating state-of-the-art Large Language Models into client websites, enhancing the user experience. With our data analysis services, we help businesses make data-driven decisions and uncover valuable insights. At AI Integrations, we prioritize customization, using state-of-the-art technology and hardware, and providing exceptional client support throughout the engagement process. Contact us today to explore how our AI solutions can transform your business.";
+      return JsonResponse({"response": response})
+
+@api_view(['POST'])
 def chatbot_view(request):
     client = OpenAI(api_key=settings.OPENAI_API_KEY)
     business_context = """

@@ -1,1 +1,4 @@
 api/__pycache__/*
+api/__pycache__/functions.cpython-39.pyc
+api/__pycache__/views.cpython-39.pyc
+venv/*
